@@ -192,11 +192,30 @@ const HomePage = () => {
               <h3 className="font-heading text-xl md:text-3xl text-primary mb-2">
                 GMP-Certified Solutions
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                 Our state-of-the-art facility operates under strict Good Manufacturing Practice
                 standards, ensuring consistent quality across all products. From encapsulation to
                 packaging, every step is monitored for precision.
               </p>
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-4 items-center">
+                {[
+                  { src: "/images/cert-health-canada.png", alt: "Canadian GMP Certified - Health Canada" },
+                  { src: "/images/cert-cgmp.png", alt: "Certified cGMP" },
+                  { src: "/images/cert-gmp-red.png", alt: "GMP Certified - Good Manufacturing Practices" },
+                  { src: "/images/cert-gmp-green.png", alt: "GMP Certified Practice" },
+                  { src: "/images/cert-fda.png", alt: "FDA Registered" },
+                  { src: "/images/cert-usda.png", alt: "USDA Organic" },
+                  { src: "/images/cert-halal.png", alt: "IFANCC Halal Certified" },
+                ].map((cert) => (
+                  <img
+                    key={cert.alt}
+                    src={cert.src}
+                    alt={cert.alt}
+                    className="h-16 md:h-20 w-auto mx-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
