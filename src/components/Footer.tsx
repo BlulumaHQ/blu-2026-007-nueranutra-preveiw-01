@@ -47,17 +47,17 @@ const Footer = () => {
             <h4 className="font-heading text-lg mb-4">Services</h4>
             <ul className="space-y-2">
               {[
-                "Turnkey Manufacturing",
-                "Formulation & Development",
-                "Custom Packaging",
-                "Regulatory Guidance",
+                { label: "Turnkey Manufacturing", anchor: "turnkey-manufacturing" },
+                { label: "Formulation & Development", anchor: "formulation-development" },
+                { label: "Custom Packaging", anchor: "custom-packaging" },
+                { label: "Regulatory Guidance", anchor: "regulatory-compliance" },
               ].map((s) => (
-                <li key={s}>
+                <li key={s.anchor}>
                   <Link
-                    to="/our-services"
+                    to={`/our-services#${s.anchor}`}
                     className="text-sm opacity-80 hover:opacity-100 transition-opacity"
                   >
-                    {s}
+                    {s.label}
                   </Link>
                 </li>
               ))}
@@ -90,12 +90,15 @@ const Footer = () => {
         <div className="container-site py-4">
           <p className="text-center text-xs opacity-60">
             <span className="hidden md:inline">
-              © 2025 NuEra Nutraceuticals Inc. | Web Design by Bluluma.com
+              © 2025 NuEra Nutraceuticals Inc. | Web Design by{" "}
+              <a href="https://bluluma.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 underline">Bluluma.com</a>
             </span>
             <span className="md:hidden">
               © 2025 NuEra Nutraceuticals Inc.
               <br />
-              <span className="text-[10px] opacity-75">Web Design by Bluluma.com</span>
+              <span className="text-[10px] opacity-75">Web Design by{" "}
+                <a href="https://bluluma.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 underline">Bluluma.com</a>
+              </span>
             </span>
           </p>
         </div>

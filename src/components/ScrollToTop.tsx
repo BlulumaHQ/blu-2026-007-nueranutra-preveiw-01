@@ -4,12 +4,21 @@ import { ArrowUp } from "lucide-react";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
-  // Route change scroll reset
+  // Route change scroll reset or anchor scroll
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash.slice(1));
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   // Show/hide button
   useEffect(() => {

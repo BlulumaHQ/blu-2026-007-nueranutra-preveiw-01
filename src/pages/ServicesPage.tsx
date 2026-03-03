@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 
 const servicesData = [
   {
+    id: "turnkey-manufacturing",
     title: "Turnkey Manufacturing Solutions",
     subtitle: "End-to-end support from concept to commercialization.",
     description:
@@ -12,6 +13,7 @@ const servicesData = [
     imageLeft: true,
   },
   {
+    id: "formulation-development",
     title: "Formulation & Development Support",
     subtitle: "Specialty ingredient sourcing and product optimization.",
     description:
@@ -21,6 +23,7 @@ const servicesData = [
     imageLeft: false,
   },
   {
+    id: "custom-packaging",
     title: "Custom Packaging Services",
     subtitle: "Innovative formats, labeling, and design execution.",
     description:
@@ -30,10 +33,11 @@ const servicesData = [
     imageLeft: true,
   },
   {
+    id: "regulatory-compliance",
     title: "Regulatory & Compliance Guidance",
     subtitle: "Licensing, health claims, and document preparation.",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum lorem ipsum.\n\nVivamus in diam turpis. In condimentum maximus tristique. Maecenas non laoreet odio. Fusce lobortis porttitor purus, vel vestibulum libero pharetra vel. Pellentesque lorem augue, fermentum nec nibh et, fringilla sollicitudin orci.",
+      "Navigating regulatory requirements in the nutraceutical industry requires precision, documentation discipline, and up-to-date knowledge of both domestic and international standards. Our Regulatory & Compliance team supports clients through Health Canada NPN applications, U.S. FDA facility registration alignment, ingredient verification, label compliance review, and permissible health claim guidance. We assist with preparation of Product Specifications, Master Manufacturing Records (MMR), Certificates of Analysis (COA), stability documentation, and export documentation to ensure your product meets all applicable regulatory frameworks.\n\nFrom pre-launch assessment to ongoing compliance monitoring, we help minimize regulatory risk and accelerate your path to market with confidence.",
     cta: "Book a Regulatory Review",
     image: "/images/services-home-4.jpg",
     imageLeft: false,
@@ -59,7 +63,8 @@ const ServicesPage = () => {
           {servicesData.map((service, idx) => (
             <div
               key={service.title}
-              className={`${idx % 2 === 0 ? "bg-background" : "section-light"}`}
+              id={service.id}
+              className={`${idx % 2 === 0 ? "bg-background" : "section-light"} scroll-mt-20`}
             >
               <div className="container-site py-10 md:py-16">
                 <div
