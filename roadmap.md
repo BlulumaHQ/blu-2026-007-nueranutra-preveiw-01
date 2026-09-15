@@ -5,4 +5,4 @@
 - [x] Preserve and reposition services, certifications, testimonials, and footer
 - [x] Add prominent header project actions
 - [x] Update homepage metadata
-- [ ] Verify desktop and mobile presentation and inquiry selection
+- [x] Verify desktop and mobile presentation and inquiry selection
