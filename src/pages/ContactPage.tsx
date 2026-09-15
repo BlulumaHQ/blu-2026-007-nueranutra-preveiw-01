@@ -1,9 +1,25 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [searchParams] = useSearchParams();
+  const inquiryParam = searchParams.get("inquiry");
+  const inquiryValues: Record<string, string> = {
+    "new-product": "New Product Development",
+    "existing-product": "Existing Product Review",
+    services: "Manufacturing Services",
+    regulatory: "Regulatory & Compliance",
+    general: "General Inquiry",
+  };
+  const [inquiryType, setInquiryType] = useState(inquiryValues[inquiryParam ?? ""] ?? "General Inquiry");
+
+  useEffect(() => {
+    setInquiryType(inquiryValues[inquiryParam ?? ""] ?? "General Inquiry");
+  }, [inquiryParam]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,7 +51,7 @@ const ContactPage = () => {
         <div className="container-site">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16">
             {/* Contact Info */}
-            <div>
+            <div id="contact-form" className="scroll-mt-28">
               <h2 className="font-heading text-2xl md:text-3xl text-primary mb-6">
                 Contact Information
               </h2>
@@ -119,6 +135,26 @@ const ContactPage = () => {
                   <input type="hidden" name="mode" value="3" />
                   <input type="hidden" name="source_url" value="https://nueranutra.com/" />
 
+                  <div>
+                    <label htmlFor="inquiry-type" className="block text-sm font-semibold mb-1">
+                      Inquiry Type <span className="text-destructive">*</span>
+                    </label>
+                    <select
+                      id="inquiry-type"
+                      name="inquiry_type"
+                      required
+                      value={inquiryType}
+                      onChange={(event) => setInquiryType(event.target.value)}
+                      className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                    >
+                      <option>New Product Development</option>
+                      <option>Existing Product Review</option>
+                      <option>Manufacturing Services</option>
+                      <option>Regulatory &amp; Compliance</option>
+                      <option>General Inquiry</option>
+                    </select>
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-semibold mb-1">
@@ -174,9 +210,9 @@ const ContactPage = () => {
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full md:w-auto">
+                  <Button type="submit" size="lg" className="w-full md:w-auto rounded-sm uppercase tracking-wide">
                     Send Message
-                  </button>
+                  </Button>
                 </form>
               )}
             </div>

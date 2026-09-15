@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -40,7 +41,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -54,6 +55,12 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
+          <Link to="/contact-us?inquiry=existing-product#contact-form" className="hidden lg:inline text-sm font-semibold text-primary hover:underline underline-offset-4">
+            Product Review
+          </Link>
+          <Button asChild className="rounded-sm uppercase tracking-wide">
+            <Link to="/contact-us?inquiry=new-product#contact-form">Start a Project</Link>
+          </Button>
         </nav>
 
         {/* Mobile Toggle */}
@@ -83,6 +90,12 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
+            <Link to="/contact-us?inquiry=existing-product#contact-form" className="text-sm font-semibold uppercase py-2 text-primary">
+              Product Review
+            </Link>
+            <Button asChild className="mt-1 rounded-sm uppercase tracking-wide">
+              <Link to="/contact-us?inquiry=new-product#contact-form">Start a Project</Link>
+            </Button>
           </nav>
         </div>
       )}
