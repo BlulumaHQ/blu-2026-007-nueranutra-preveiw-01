@@ -198,6 +198,119 @@ const ContactPage = () => {
                     />
                   </div>
 
+                  {inquiryType === "Existing Product Assessment" && (
+                    <div className="space-y-4 border-t border-border pt-4">
+                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
+                        Existing Product Details
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-semibold mb-1">Company Name</label>
+                          <input
+                            type="text"
+                            name="company_name"
+                            className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-1">Product Name</label>
+                          <input
+                            type="text"
+                            name="product_name"
+                            className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-1">Product Type</label>
+                          <select
+                            name="product_type"
+                            defaultValue=""
+                            className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                          >
+                            <option value="">Please select</option>
+                            <option>Capsules</option>
+                            <option>Tablets</option>
+                            <option>Powder</option>
+                            <option>Sachets</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-1">Current Product Status</label>
+                          <select
+                            name="product_status"
+                            defaultValue=""
+                            className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                          >
+                            <option value="">Please select</option>
+                            <option>In market</option>
+                            <option>In production</option>
+                            <option>In development</option>
+                            <option>On hold</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-1">NPN Status</label>
+                          <select
+                            name="npn_status"
+                            defaultValue=""
+                            className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                          >
+                            <option value="">Please select</option>
+                            <option>NPN issued</option>
+                            <option>Application submitted</option>
+                            <option>Not yet applied</option>
+                            <option>Not applicable</option>
+                            <option>Unsure</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-1">Estimated Production Volume</label>
+                          <input
+                            type="text"
+                            name="production_volume"
+                            className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-semibold mb-1">Current Manufacturing Situation</label>
+                        <select
+                          name="manufacturing_situation"
+                          defaultValue=""
+                          className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                        >
+                          <option value="">Please select</option>
+                          <option>Currently with another manufacturer</option>
+                          <option>Manufacturing in-house</option>
+                          <option>Between manufacturers</option>
+                          <option>Not yet manufacturing</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-semibold mb-1">Primary Reason for Assessment</label>
+                        <select
+                          name="assessment_reason"
+                          defaultValue=""
+                          className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
+                        >
+                          <option value="">Please select</option>
+                          <option>Quality control and testing</option>
+                          <option>Batch consistency</option>
+                          <option>Regulatory and compliance support</option>
+                          <option>Reformulation or improvement</option>
+                          <option>Capacity or scale-up</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                    </div>
+                  )}
+
+
+
                   <div>
                     <label className="block text-sm font-semibold mb-1">
                       Message <span className="text-destructive">*</span>
