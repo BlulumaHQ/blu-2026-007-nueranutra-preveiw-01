@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
           ))}
           <Link to="/contact-us?inquiry=existing-product#contact-form" className="hidden lg:inline text-sm font-semibold text-primary hover:underline underline-offset-4">
-            Product Review
+            Product Assessment
           </Link>
           <Button asChild className="rounded-sm uppercase tracking-wide">
             <Link to="/contact-us?inquiry=new-product#contact-form">Start a Project</Link>
@@ -91,7 +91,7 @@ const Header = () => {
               </Link>
             ))}
             <Link to="/contact-us?inquiry=existing-product#contact-form" className="text-sm font-semibold uppercase py-2 text-primary">
-              Product Review
+              Product Assessment
             </Link>
             <Button asChild className="mt-1 rounded-sm uppercase tracking-wide">
               <Link to="/contact-us?inquiry=new-product#contact-form">Start a Project</Link>

@@ -10,7 +10,7 @@ const ContactPage = () => {
   const inquiryParam = searchParams.get("inquiry");
   const inquiryValues: Record<string, string> = {
     "new-product": "New Product Development",
-    "existing-product": "Existing Product Review",
+    "existing-product": "Existing Product Assessment",
     services: "Manufacturing Services",
     regulatory: "Regulatory & Compliance",
     general: "General Inquiry",
@@ -148,7 +148,7 @@ const ContactPage = () => {
                       className="w-full border border-input rounded-sm px-3 py-2 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
                     >
                       <option>New Product Development</option>
-                      <option>Existing Product Review</option>
+                      <option>Existing Product Assessment</option>
                       <option>Manufacturing Services</option>
                       <option>Regulatory &amp; Compliance</option>
                       <option>General Inquiry</option>

@@ -79,7 +79,7 @@ const HomePage = () => {
             <p className="mt-5 max-w-2xl text-sm md:text-base leading-relaxed text-primary-foreground/85">A Health Canada Site Licence is only the starting point. At NuEra Nutraceuticals, our day-to-day manufacturing standards are built around rigorous SOPs, advanced testing, transparent documentation and repeatable quality control—helping ensure what is on your label is delivered consistently in every batch.</p>
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <Button asChild size="lg" className="rounded-sm uppercase tracking-wide"><Link to="/contact-us?inquiry=new-product#contact-form">Start a New Product</Link></Button>
-              <Button asChild size="lg" variant="outline" className="rounded-sm border-primary-foreground/70 bg-transparent text-primary-foreground uppercase tracking-wide hover:bg-primary-foreground hover:text-primary"><Link to="/contact-us?inquiry=existing-product#contact-form">Review an Existing Product</Link></Button>
+              <Button asChild size="lg" variant="outline" className="rounded-sm border-primary-foreground/70 bg-transparent text-primary-foreground uppercase tracking-wide hover:bg-primary-foreground hover:text-primary"><Link to="/contact-us?inquiry=existing-product#contact-form">Request a Product Assessment</Link></Button>
             </div>
             <p className="mt-5 text-xs md:text-sm font-semibold tracking-wide text-primary-foreground/80">Precision. Verification. Consistency. Every Batch.</p>
           </motion.div>
@@ -97,10 +97,10 @@ const HomePage = () => {
               <Button asChild variant="link" className="h-auto p-0 font-semibold"><Link to="/contact-us?inquiry=new-product#contact-form">Start a New Product <ArrowRight /></Link></Button>
             </article>
             <article className="p-6 md:p-9">
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary mb-3">Existing Product Review</p>
-              <h3 className="text-xl md:text-2xl text-foreground mb-3">Review an Existing Product</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground mb-6">Already have a product in market or in production? Let our team review your formulation, manufacturing requirements, quality controls and testing strategy to identify opportunities to strengthen consistency and compliance.</p>
-              <Button asChild variant="link" className="h-auto p-0 font-semibold"><Link to="/contact-us?inquiry=existing-product#contact-form">Request a Product Review <ArrowRight /></Link></Button>
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary mb-3">Existing Product Assessment</p>
+              <h3 className="text-xl md:text-2xl text-foreground mb-3">Already Have a Product?</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground mb-6">Have an existing formulation, product, or manufacturing process? Speak with NuEra about your current product requirements, quality controls, testing strategy, manufacturing consistency and opportunities for improvement.</p>
+              <Button asChild variant="link" className="h-auto p-0 font-semibold"><Link to="/contact-us?inquiry=existing-product#contact-form">Request a Product Assessment <ArrowRight /></Link></Button>
             </article>
           </div>
         </div>
@@ -212,7 +212,7 @@ const HomePage = () => {
             <Button asChild size="lg" className="rounded-sm uppercase tracking-wide"><Link to="/contact-us?inquiry=general#contact-form">Schedule a Quality &amp; Technical Consultation</Link></Button>
             <Button asChild size="lg" variant="outline" className="rounded-sm border-primary bg-transparent text-primary uppercase tracking-wide hover:bg-primary hover:text-primary-foreground"><Link to="/contact-us?inquiry=new-product#contact-form">Start a New Product</Link></Button>
           </div>
-          <Button asChild variant="link" className="mt-3 text-primary"><Link to="/contact-us?inquiry=existing-product#contact-form">Review an Existing Product</Link></Button>
+          <Button asChild variant="link" className="mt-3 text-primary"><Link to="/contact-us?inquiry=existing-product#contact-form">Request a Product Assessment</Link></Button>
         </div>
       </section>
     </>
