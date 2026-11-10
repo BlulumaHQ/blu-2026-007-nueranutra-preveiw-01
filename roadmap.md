@@ -6,3 +6,4 @@
 - [x] Add prominent header project actions
 - [x] Update homepage metadata
 - [x] Verify desktop and mobile presentation and inquiry selection
+- [x] Add domain-aware noindex policy (platform domains noindex, custom domain index-eligible)
